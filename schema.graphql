@@ -1,0 +1,18 @@
+type Pool @entity {
+	id: ID!
+	assets: [Bytes!]!
+	amounts: [BigInt!]!
+	totalAmount: BigInt!
+}
+
+type Balance @entity {
+	id: ID!
+	user: User!
+	pool: Pool!
+	amount: BigInt!
+}
+
+type User @entity {
+	id: ID!
+	pools: [Balance!] @derivedFrom(field: "user")
+}

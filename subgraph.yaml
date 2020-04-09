@@ -1,0 +1,252 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: USDC-DAI Pool
+    network: mainnet
+    source:
+      address: "0x2e60CF74d81ac34eB21eEff58Db4D385920ef419"
+      abi: poolUsdcDai
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Pool
+        - Balance
+        - User
+      eventHandlers:
+        - event: AddLiquidity(indexed address,uint256[2],uint256,uint256)
+          handler: handleAddLiquidity2
+        - event: RemoveLiquidity(indexed address,uint256[2],uint256[2],uint256,uint256)
+          handler: handleRemoveLiquidity2
+        - event: TokenExchange(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchange
+        - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchangeUnderlying
+      abis:
+        - name: poolUsdcDai
+          file: ./abis/poolUsdcDai.json
+        - name: cToken
+          file: ./abis/cToken.json
+      file: ./src/pool.ts
+  - kind: ethereum/contract
+    name: USDC-DAI Pool 2
+    network: mainnet
+    source:
+      address: "0xA2B47E3D5c44877cca798226B7B8118F9BFb7A56"
+      abi: poolUsdcDai
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Pool
+        - Balance
+        - User
+      eventHandlers:
+        - event: AddLiquidity(indexed address,uint256[2],uint256[2],uint256,uint256)
+          handler: handleAddLiquidity2Fees
+        - event: RemoveLiquidity(indexed address,uint256[2],uint256[2],uint256,uint256)
+          handler: handleRemoveLiquidity2
+        - event: RemoveLiquidityImbalance(indexed address,uint256[2],uint256[2],uint256,uint256)
+          handler: handleRemoveLiquidityImbalance2
+        - event: TokenExchange(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchange
+        - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchangeUnderlying
+      abis:
+        - name: poolUsdcDai
+          file: ./abis/poolUsdcDai.json
+        - name: cToken
+          file: ./abis/cToken.json
+      file: ./src/pool.ts
+  - kind: ethereum/contract
+    name: USDC-DAI-USDT Pool
+    network: mainnet
+    source:
+      address: "0x52EA46506B9CC5Ef470C5bf89f17Dc28bB35D85C"
+      abi: poolUsdcDaiUsdt
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Pool
+        - Balance
+        - User
+      eventHandlers:
+        - event: AddLiquidity(indexed address,uint256[3],uint256[3],uint256,uint256)
+          handler: handleAddLiquidity3
+        - event: RemoveLiquidity(indexed address,uint256[3],uint256[3],uint256)
+          handler: handleRemoveLiquidity3
+        - event: RemoveLiquidityImbalance(indexed address,uint256[3],uint256[3],uint256,uint256)
+          handler: handleRemoveLiquidityImbalance3
+        - event: TokenExchange(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchange
+        - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchangeUnderlying
+      abis:
+        - name: poolUsdcDaiUsdt
+          file: ./abis/poolUsdcDaiUsdt.json
+        - name: cToken
+          file: ./abis/cToken.json
+      file: ./src/pool.ts
+  - kind: ethereum/contract
+    name: yToken Pool
+    network: mainnet
+    source:
+      address: "0x45F783CCE6B7FF23B2ab2D70e416cdb7D6055f51"
+      abi: poolYToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Pool
+        - Balance
+        - User
+      eventHandlers:
+        - event: AddLiquidity(indexed address,uint256[4],uint256[4],uint256,uint256)
+          handler: handleAddLiquidity4
+        - event: RemoveLiquidity(indexed address,uint256[4],uint256[4],uint256)
+          handler: handleRemoveLiquidity4
+        - event: RemoveLiquidityImbalance(indexed address,uint256[4],uint256[4],uint256,uint256)
+          handler: handleRemoveLiquidityImbalance4
+        - event: TokenExchange(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchange
+        - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchangeUnderlying
+      abis:
+        - name: poolYToken
+          file: ./abis/poolYToken.json
+        - name: yToken
+          file: ./abis/yToken.json
+      file: ./src/pool.ts
+  - kind: ethereum/contract
+    name: yToken Pool 2
+    network: mainnet
+    source:
+      address: "0x79a8C46DeA5aDa233ABaFFD40F3A0A2B1e5A4F27"
+      abi: poolYToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Pool
+        - Balance
+        - User
+      eventHandlers:
+        - event: AddLiquidity(indexed address,uint256[4],uint256[4],uint256,uint256)
+          handler: handleAddLiquidity4
+        - event: RemoveLiquidity(indexed address,uint256[4],uint256[4],uint256)
+          handler: handleRemoveLiquidity4
+        - event: RemoveLiquidityImbalance(indexed address,uint256[4],uint256[4],uint256,uint256)
+          handler: handleRemoveLiquidityImbalance4
+        - event: TokenExchange(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchange
+        - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
+          handler: handleTokenExchangeUnderlying
+      abis:
+        - name: poolYToken
+          file: ./abis/poolYToken.json
+        - name: yToken
+          file: ./abis/yToken.json
+      file: ./src/pool.ts
+  - kind: ethereum/contract
+    name: USDC-DAI Pool Token
+    network: mainnet
+    source:
+      address: "0x3740fb63ab7a09891d7c0d4299442A551D06F5fD"
+      abi: erc20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Balance
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      file: ./src/token.ts
+  - kind: ethereum/contract
+    name: USDC-DAI Pool 2 Token
+    network: mainnet
+    source:
+      address: "0x845838DF265Dcd2c412A1Dc9e959c7d08537f8a2"
+      abi: erc20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Balance
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      file: ./src/token.ts
+  - kind: ethereum/contract
+    name: USDC-DAI-USDT Pool Token
+    network: mainnet
+    source:
+      address: "0x9fC689CCaDa600B6DF723D9E47D84d76664a1F23"
+      abi: erc20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Balance
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      file: ./src/token.ts
+  - kind: ethereum/contract
+    name: yToken Pool Token
+    network: mainnet
+    source:
+      address: "0xdF5e0e81Dff6FAF3A7e52BA697820c5e32D806A8"
+      abi: erc20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Balance
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      file: ./src/token.ts
+  - kind: ethereum/contract
+    name: yToken Pool 2 Token
+    network: mainnet
+    source:
+      address: "0x3B3Ac5386837Dc563660FB6a0937DFAa5924333B"
+      abi: erc20
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Balance
+      eventHandlers:
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      abis:
+        - name: erc20
+          file: ./abis/erc20.json
+      file: ./src/token.ts
