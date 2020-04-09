@@ -10,7 +10,7 @@ dataSources:
       abi: poolUsdcDai
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Pool
@@ -39,7 +39,7 @@ dataSources:
       abi: poolUsdcDai
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Pool
@@ -70,7 +70,7 @@ dataSources:
       abi: poolUsdcDaiUsdt
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Pool
@@ -101,7 +101,7 @@ dataSources:
       abi: poolYToken
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Pool
@@ -132,7 +132,7 @@ dataSources:
       abi: poolYToken
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Pool
@@ -163,7 +163,7 @@ dataSources:
       abi: erc20
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Balance
@@ -182,7 +182,7 @@ dataSources:
       abi: erc20
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Balance
@@ -201,7 +201,7 @@ dataSources:
       abi: erc20
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Balance
@@ -220,7 +220,7 @@ dataSources:
       abi: erc20
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Balance
@@ -239,7 +239,7 @@ dataSources:
       abi: erc20
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.3
+      apiVersion: 0.0.4
       language: wasm/assemblyscript
       entities:
         - Balance
