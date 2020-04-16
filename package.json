@@ -1,6 +1,12 @@
 {
   "name": "Curve-subgraph",
-  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "description": "Curve Subgraph",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/GraphiteTools/curve-subgraph.git"
+  },
   "scripts": {
     "codegen": "graph codegen",
     "build": "graph build",
