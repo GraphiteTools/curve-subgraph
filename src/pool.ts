@@ -237,6 +237,22 @@ function _getAssets(address: Address): Array<Bytes> {
 			Bytes.fromHexString('0x04bC0Ab673d88aE9dbC9DA2380cB6B79C4BCa9aE') as Bytes,
 		];
 	}
+	if (addressString == '0xa5407eae9ba41422680e2e00537571bcc53efbfd') {
+		return [
+			Bytes.fromHexString('0x6b175474e89094c44da98b954eedeac495271d0f') as Bytes,
+			Bytes.fromHexString('0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48') as Bytes,
+			Bytes.fromHexString('0xdac17f958d2ee523a2206206994597c13d831ec7') as Bytes,
+			Bytes.fromHexString('0x57ab1ec28d129707052df4df418d58a2d46d5f51') as Bytes,
+		];
+	}
+	if (addressString == '0x06364f10b501e868329afbc005b3492902d6c763') {
+		return [
+			Bytes.fromHexString('0x99d1fa417f94dcd62bfe781a1213c092a47041bc') as Bytes,
+			Bytes.fromHexString('0x9777d7e2b60bb01759d0e2f8be2095df444cb07e') as Bytes,
+			Bytes.fromHexString('0x1be5d71f2da660bfdee8012ddc58d024448a0a59') as Bytes,
+			Bytes.fromHexString('0x8e870d67f660d95d5be530380d0ec0bd388289e1') as Bytes,
+		];
+	}
 	return [];
 }
 
@@ -277,6 +293,22 @@ function _getAmounts(address: Address): Array<BigInt> {
 			BigInt.fromI32(0),
 		];
 	}
+	if (addressString == '0xa5407eae9ba41422680e2e00537571bcc53efbfd') {
+		return [
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+		];
+	}
+	if (addressString == '0x06364f10b501e868329afbc005b3492902d6c763') {
+		return [
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+		];
+	}
 	return [];
 }
 
@@ -290,6 +322,15 @@ function _getRate(tokenAddress: Bytes): BigInt {
 		Bytes.fromHexString('0xd6aD7a6750A7593E092a9B218d66C0A814a3436e') as Bytes,
 		Bytes.fromHexString('0x83f798e925BcD4017Eb265844FDDAbb448f1707D') as Bytes,
 		Bytes.fromHexString('0x73a052500105205d34Daf004eAb301916DA8190f') as Bytes,
+
+		Bytes.fromHexString('0xc2cb1040220768554cf699b0d863a3cd4324ce32') as Bytes,
+		Bytes.fromHexString('0x26ea744e5b887e5205727f55dfbe8685e3b21951') as Bytes,
+		Bytes.fromHexString('0xe6354ed5bc4b393a5aad09f21c46e101e692d447') as Bytes,
+		Bytes.fromHexString('0x04bc0ab673d88ae9dbc9da2380cb6b79c4bca9ae') as Bytes,
+
+		Bytes.fromHexString('0x99d1fa417f94dcd62bfe781a1213c092a47041bc') as Bytes,
+		Bytes.fromHexString('0x9777d7e2b60bb01759d0e2f8be2095df444cb07e') as Bytes,
+		Bytes.fromHexString('0x1be5d71f2da660bfdee8012ddc58d024448a0a59') as Bytes,
 	];
 	if (cTokenList.includes(tokenAddress)) {
 		let cToken = cTokenContract.bind(tokenAddress as Address);

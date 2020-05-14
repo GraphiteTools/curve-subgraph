@@ -61,5 +61,11 @@ function _getTokenPool(tokenAddress: String): String {
 	if (tokenAddress == '0x3b3ac5386837dc563660fb6a0937dfaa5924333b') {
 		return '0x79a8c46dea5ada233abaffd40f3a0a2b1e5a4f27';
 	}
+	if (tokenAddress == '0xc25a3a3b969415c80451098fa907ec722572917f') {
+		return '0xa5407eae9ba41422680e2e00537571bcc53efbfd';
+	}
+	if (tokenAddress == '0xd905e2eaebe188fc92179b6350807d8bd91db0d8') {
+		return '0x06364f10b501e868329afbc005b3492902d6c763';
+	}
 	return '';
 }
