@@ -7,7 +7,7 @@ dataSources:
     network: mainnet
     source:
       address: "0x2e60CF74d81ac34eB21eEff58Db4D385920ef419"
-      abi: poolUsdcDai
+      abi: twoTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -26,8 +26,8 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolUsdcDai
-          file: ./abis/poolUsdcDai.json
+        - name: twoTokenPool
+          file: ./abis/twoTokenPool.json
         - name: cToken
           file: ./abis/cToken.json
       file: ./src/pool.ts
@@ -36,7 +36,7 @@ dataSources:
     network: mainnet
     source:
       address: "0xA2B47E3D5c44877cca798226B7B8118F9BFb7A56"
-      abi: poolUsdcDai
+      abi: twoTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -57,8 +57,8 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolUsdcDai
-          file: ./abis/poolUsdcDai.json
+        - name: twoTokenPool
+          file: ./abis/twoTokenPool.json
         - name: cToken
           file: ./abis/cToken.json
       file: ./src/pool.ts
@@ -67,7 +67,7 @@ dataSources:
     network: mainnet
     source:
       address: "0x52EA46506B9CC5Ef470C5bf89f17Dc28bB35D85C"
-      abi: poolUsdcDaiUsdt
+      abi: threeTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -88,8 +88,8 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolUsdcDaiUsdt
-          file: ./abis/poolUsdcDaiUsdt.json
+        - name: threeTokenPool
+          file: ./abis/threeTokenPool.json
         - name: cToken
           file: ./abis/cToken.json
       file: ./src/pool.ts
@@ -98,7 +98,7 @@ dataSources:
     network: mainnet
     source:
       address: "0x45F783CCE6B7FF23B2ab2D70e416cdb7D6055f51"
-      abi: poolYToken
+      abi: fourTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -119,8 +119,8 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolYToken
-          file: ./abis/poolYToken.json
+        - name: fourTokenPool
+          file: ./abis/fourTokenPool.json
         - name: yToken
           file: ./abis/yToken.json
       file: ./src/pool.ts
@@ -129,7 +129,7 @@ dataSources:
     network: mainnet
     source:
       address: "0x79a8C46DeA5aDa233ABaFFD40F3A0A2B1e5A4F27"
-      abi: poolYToken
+      abi: fourTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -150,8 +150,8 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolYToken
-          file: ./abis/poolYToken.json
+        - name: fourTokenPool
+          file: ./abis/fourTokenPool.json
         - name: yToken
           file: ./abis/yToken.json
       file: ./src/pool.ts
@@ -160,7 +160,7 @@ dataSources:
     network: mainnet
     source:
       address: "0xA5407eAE9Ba41422680e2e00537571bcC53efBfD"
-      abi: poolYToken
+      abi: fourTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -181,15 +181,15 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolYToken
-          file: ./abis/poolYToken.json
+        - name: fourTokenPool
+          file: ./abis/fourTokenPool.json
       file: ./src/pool.ts
   - kind: ethereum/contract
     name: PAX Pool
     network: mainnet
     source:
       address: "0x06364f10B501e868329afBc005b3492902d6C763"
-      abi: poolYToken
+      abi: fourTokenPool
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -210,8 +210,8 @@ dataSources:
         - event: TokenExchangeUnderlying(indexed address,int128,uint256,int128,uint256)
           handler: handleTokenExchangeUnderlying
       abis:
-        - name: poolYToken
-          file: ./abis/poolYToken.json
+        - name: fourTokenPool
+          file: ./abis/fourTokenPool.json
         - name: yToken
           file: ./abis/yToken.json
       file: ./src/pool.ts

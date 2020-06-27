@@ -1,9 +1,9 @@
 import { Address, BigInt, Bytes } from "@graphprotocol/graph-ts";
 
-import { TokenExchangeUnderlying, TokenExchange } from "../generated/USDC-DAI Pool/poolUsdcDai";
-import { AddLiquidity as AddLiquidity2, AddLiquidity1 as AddLiquidity2Fees, RemoveLiquidity as RemoveLiquidity2, RemoveLiquidityImbalance as RemoveLiquidityImbalance2 } from "../generated/USDC-DAI Pool/poolUsdcDai";
-import { AddLiquidity as AddLiquidity3, RemoveLiquidity as RemoveLiquidity3, RemoveLiquidityImbalance as RemoveLiquidityImbalance3 } from "../generated/USDC-DAI-USDT Pool/poolUsdcDaiUsdt";
-import { AddLiquidity as AddLiquidity4, RemoveLiquidity as RemoveLiquidity4, RemoveLiquidityImbalance as RemoveLiquidityImbalance4 } from "../generated/yToken Pool/poolYToken";
+import { TokenExchangeUnderlying, TokenExchange } from "../generated/USDC-DAI Pool/twoTokenPool";
+import { AddLiquidity as AddLiquidity2, AddLiquidity1 as AddLiquidity2Fees, RemoveLiquidity as RemoveLiquidity2, RemoveLiquidityImbalance as RemoveLiquidityImbalance2 } from "../generated/USDC-DAI Pool/twoTokenPool";
+import { AddLiquidity as AddLiquidity3, RemoveLiquidity as RemoveLiquidity3, RemoveLiquidityImbalance as RemoveLiquidityImbalance3 } from "../generated/USDC-DAI-USDT Pool/threeTokenPool";
+import { AddLiquidity as AddLiquidity4, RemoveLiquidity as RemoveLiquidity4, RemoveLiquidityImbalance as RemoveLiquidityImbalance4 } from "../generated/yToken Pool/fourTokenPool";
 import { cToken as cTokenContract } from "../generated/USDC-DAI Pool/cToken";
 import { yToken as yTokenContract } from "../generated/yToken Pool/yToken";
 import { Pool } from "../generated/schema";
