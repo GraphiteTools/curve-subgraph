@@ -253,6 +253,19 @@ function _getAssets(address: Address): Array<Bytes> {
 			Bytes.fromHexString('0x8e870d67f660d95d5be530380d0ec0bd388289e1') as Bytes,
 		];
 	}
+	if (addressString == '0x93054188d876f558f4a66B2EF1d97d16eDf0895B') {
+		return [
+			Bytes.fromHexString('0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D') as Bytes,
+			Bytes.fromHexString('0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599') as Bytes,
+		];
+	}
+	if (addressString == '0x7fC77b5c7614E1533320Ea6DDc2Eb61fa00A9714') {
+		return [
+			Bytes.fromHexString('0xEB4C2781e4ebA804CE9a9803C67d0893436bB27D') as Bytes,
+			Bytes.fromHexString('0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599') as Bytes,
+			Bytes.fromHexString('0xfE18be6b3Bd88A2D2A7f928d00292E7a9963CfC6') as Bytes,
+		];
+	}
 	return [];
 }
 
@@ -304,6 +317,19 @@ function _getAmounts(address: Address): Array<BigInt> {
 	if (addressString == '0x06364f10b501e868329afbc005b3492902d6c763') {
 		return [
 			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+		];
+	}
+	if (addressString == '0x93054188d876f558f4a66B2EF1d97d16eDf0895B') {
+		return [
+			BigInt.fromI32(0),
+			BigInt.fromI32(0),
+		];
+	}
+	if (addressString == '0x7fC77b5c7614E1533320Ea6DDc2Eb61fa00A9714') {
+		return [
 			BigInt.fromI32(0),
 			BigInt.fromI32(0),
 			BigInt.fromI32(0),
